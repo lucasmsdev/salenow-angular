@@ -1,0 +1,65 @@
+<button [routerLink]="['']" class="d-block btn btn-dark rounded mb-3">
+  Voltar
+</button>
+<div class="card-body">
+  <h2 class="text-dark text-center">{{ room.name }}</h2>
+
+  <div class="row">
+    <div class="col-12 col-md-7">
+      <div class="card">
+        <iframe
+          class="e2e-iframe-trusted-src"
+          height="400"
+          [src]="room.youtube_url | safe"
+          frameborder="0"
+          allow="accelerometer;autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="card rounded shadow">
+        <div class="card-body">
+          <h5 class="border-bottom pb-2 mb-0 p-">Comentarios</h5>
+          <div class="d-flex align-items-start text-muted pt-3">
+            <img class="user-picture me-3" />
+
+            <div class="pb-2 mb-0 large lh-sm">
+              <input
+                type="text"
+                class="rounded m-3"
+                placeholder="Insira seu comentario "
+              />
+              <button class="btn btn-dark rounded-circle">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+
+      <button class="btn btn-dark mt-1 w-100" (click)="delete()">
+        Excluir anuncio
+      </button>
+    </div>
+    <div class="col-12 col-md-5">
+      <div class="card rounded shadow">
+        <div class="card-body">
+          <h2 class="border-bottom pb-2 mb-0">Descrição</h2>
+          <div class="d-flex align-items-start text-muted pt-3">
+            <img class="user-picture me-3" />
+
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+              <h2><b>R${{ room.price }}</b></h2>
+              <hr>
+              <h5>{{ room.description }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>

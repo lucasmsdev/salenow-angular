@@ -1,0 +1,9 @@
+.card-title{
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue ;
+}
+.card-img-top{
+  image-rendering: auto;
+  border-radius: 30px;
+}

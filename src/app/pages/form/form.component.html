@@ -1,0 +1,65 @@
+<button class="rounded btn btn-dark" [routerLink]="['']">Voltar</button>
+<br />
+<br />
+
+<h1>Novo anúncio</h1>
+<br />
+
+<form (ngSubmit)="save()" [formGroup]="formRoom">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nome do anúncio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      formControlName="name"
+      placeholder="Nome do anúncio "
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Descrição do produto</label>
+    <textarea
+      class="form-control"
+      id="description"
+      formControlName="description"
+      rows="3"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="image_url" class="form-label">Imagem do anúncio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="image_url"
+      formControlName="image_url"
+      placeholder="Insira o link da imagem  "
+    />
+  </div>
+  <div class="mb-3">
+    <label for="youtube_url" class="form-label">Url video de anúncio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="youtube_url"
+      formControlName="youtube_url"
+      placeholder="Insira a url de seu vídeo mostrando as condições do produto"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Preço do produto</label>
+    <input
+      type="number"
+      class="form-control"
+      id="price"
+      formControlName="price"
+
+    />
+  </div>
+
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+</form>

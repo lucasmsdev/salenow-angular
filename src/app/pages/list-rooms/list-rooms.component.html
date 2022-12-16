@@ -1,0 +1,18 @@
+<div  class="row align-items">
+  <div
+    *ngFor="let room of rooms"
+    class="card text-dark bg-dark mb-2 m-2 text-center"
+    style="max-width: 15rem"
+    [routerLink]="['/rooms', room.id]"
+  >
+    <img [routerLink]="['/rooms', room.id]" [src]="room.image_url" class="card-img-top p-4" alt=""  height="40%" width="70%" />
+    <div class="card-body ">
+      <h4 class="card-title">
+        <b>{{ room.name }}</b>
+        <br>
+        <br>
+        <button class="btn btn-danger">Clique e saiba mais!</button>
+      </h4>
+    </div>
+  </div>
+</div>
